@@ -1,2 +1,2 @@
 # AFKBOT
-A Bot for Legend_Of_IPhoneix's Unichat
+A Bot for \_iPhoenix\_'s UniChat.
