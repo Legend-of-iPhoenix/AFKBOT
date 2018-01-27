@@ -21,7 +21,7 @@ afkBot.executeCommand =  function(data) {
   }
 
   if (message.substring(0,7) == "afkinfo") {
-    this.respond("AFKBOT: originally created by LAX18 on 12/31/17, optimized by _iPhoenix_ on 1/2/18");
+    this.respond("AFKBOT: originally created by LAX18 on 12/31/17, optimized by _iPhoenix_ on 1/2/18, tested on 1/27/18");
   }
   else {
     //For future reference, & is a bitwise operator that you probably will never need. && is the logical and, which is what you wanted. 
