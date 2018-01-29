@@ -21,20 +21,20 @@ afkBot.executeCommand =  function(data) {
   }
 
   if (message.substring(0,7) == "afkinfo") {
-    this.respond("AFKBOT: originally created by LAX18 on 12/31/17, optimized by _iPhoenix_ on 1/2/18, tested on 1/27/18");
+    afkBot.respond("AFKBOT: originally created by LAX18 on 12/31/17, optimized by _iPhoenix_ on 1/2/18, tested on 1/27/18");
   }
   else {
     //For future reference, & is a bitwise operator that you probably will never need. && is the logical and, which is what you wanted. 
     //if our array of users that are currently afk includes the poster, then they have typed something and aren't AFK.
-    if (this.afkUsers.includes(poster)) {
-      this.afkUsers = remove(this.afkUsers, poster);
+    if (afkBot.afkUsers.indexOf(poster) != -1) {
+      afkBot.afkUsers = remove(this.afkUsers, poster);
       this.respond("*" + poster + " is no longer AFK.");
     }
     else {
       //if the message sent is ~afk, (The header char is not removed because we initialized our bot with the empty string) mark the user as such and add them to our list of AFK people.
       if (message == "~afk") {
-        this.afkUsers.push(poster)
-        this.respond(poster + " has gone AFK.");
+        afkBot.afkUsers.push(poster)
+        afkBot.respond(poster + " has gone AFK.");
       }
     }
   }
